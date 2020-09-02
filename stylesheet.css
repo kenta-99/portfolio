@@ -1,0 +1,304 @@
+  .name {
+      text-align: center;
+      width: 100%;
+      padding-right: 240px;
+  }
+
+  body {
+      margin: 0;
+      display: flex;
+      flex-flow: column;
+      min-height: 100vh;
+      background-color: #FCF9F5;
+  }
+
+  main {
+      flex: 1;
+  }
+
+  #nav-drawer {
+      position: relative;
+      float: right;
+      padding-right: 30px;
+  }
+
+  /*チェックボックス等は非表示に*/
+
+  .nav-unshown {
+      display: none;
+  }
+
+  /*アイコンのスペース*/
+
+  #nav-open {
+      display: inline-block;
+      width: 30px;
+      height: 22px;
+      vertical-align: middle;
+  }
+
+  /*ハンバーガーアイコンをCSSだけで表現*/
+
+  #nav-open span, #nav-open span:before, #nav-open span:after {
+      position: absolute;
+      height: 3px;
+      /*線の太さ*/
+      width: 25px;
+      /*長さ*/
+      border-radius: 3px;
+      background: #555;
+      display: block;
+      content: '';
+      cursor: pointer;
+  }
+
+  #nav-open span:before {
+      bottom: -8px;
+  }
+
+  #nav-open span:after {
+      bottom: -16px;
+  }
+
+  /*閉じる用の薄黒カバー*/
+
+  #nav-close {
+      display: none;
+      /*はじめは隠しておく*/
+      position: fixed;
+      z-index: 99;
+      top: 0;
+      /*全体に広がるように*/
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: 0;
+      transition: .3s ease-in-out;
+  }
+
+  /*中身*/
+
+  #nav-content {
+      overflow: auto;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 9999;
+      /*最前面に*/
+      width: 90%;
+      /*右側に隙間を作る（閉じるカバーを表示）*/
+      max-width: 330px;
+      /*最大幅（調整してください）*/
+      height: 100%;
+      background: #FCF9F5;
+      /*背景色*/
+      transition: .3s ease-in-out;
+      /*滑らかに表示*/
+      -webkit-transform: translateX(105%);
+      transform: translateX(105%);
+      /*左に隠しておく*/
+  }
+
+  /*チェックが入ったらもろもろ表示*/
+
+  #nav-input:checked~#nav-close {
+      display: block;
+      /*カバーを表示*/
+      opacity: .5;
+  }
+
+  #nav-input:checked~#nav-content {
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+      /*中身を表示（右へスライド）*/
+      box-shadow: 6px 0 25px rgba(0, 0, 0, .15);
+  }
+
+  .pic1:hover {
+      transform: translateX(-10px) translateY(-10px) translateZ(10px);
+      -webkit-transform: translateX(-10px) translateY(-10px) translateZ(10px);
+      transition: 0.4s;
+  }
+
+  .pic2:hover {
+      transform: translateX(10px) translateY(-10px) translateZ(10px);
+      -webkit-transform: translateX(10px) translateY(-10px) translateZ(10px);
+      transition: 0.4s;
+  }
+
+  .pic3:hover {
+      transform: translateX(-10px) translateY(10px) translateZ(10px);
+      -webkit-transform: translateX(-10px) translateY(10px) translateZ(10px);
+      transition: 0.4s;
+  }
+
+  .pic4:hover {
+      transform: translateX(10px) translateY(10px) translateZ(10px);
+      -webkit-transform: translateX(10px) translateY(10px) translateZ(10px);
+      transition: 0.4s;
+  }
+
+  .produce-box {
+      padding: 0 200px;
+  }
+
+  .profile {
+      width: 100%;
+      display: flex;
+      padding: 20px;
+      /* justify-content: center; */
+      align-items: center;
+  }
+
+  .profile-text {
+      padding: 0 30px;
+  }
+
+    .profile{
+        padding: 20px ;
+    }
+  .profile img {
+      width: 300px;
+      text-align: center;
+      object-fit: contain;
+  }
+
+  .seminar {
+      width: 100%;
+      display: flex;
+      /* justify-content: center; */
+      align-items: center;
+      padding: 20px;
+  }
+
+  .seminar-text {
+      /* justify-content: flex-start; */
+      padding: 0 30px;
+      order: 1;
+  }
+
+  .produce-box {
+      text-align: center;
+  }
+
+  .seminar p {
+      padding: 20px 0;
+  }
+
+  .seminar img {
+      width: 300px;
+      text-align: center;
+      object-fit: contain;
+      order: 2;
+  }
+
+  .skills {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  .skills p {
+      padding: 20px 0;
+  }
+
+  .skills img {
+      width: 300px;
+      object-fit: contain;
+  }
+  .skills-text{
+      padding: 0 30px;
+  }
+
+  .contact {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+  }
+
+  .contact p{
+      padding: 20px 0;
+  }
+
+  .contact img {
+      width: 300px;
+      object-fit: contain;
+  }
+
+  form {
+      margin-left: 10px;
+  }
+
+  .SNS {
+      width: 100%;
+  }
+
+  .grass3 {
+      float: left;
+  }
+
+  .grass4 {
+      width: 229px;
+      float: right;
+      object-fit: contain;
+  }
+
+  .icontop {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+
+  .iconbottom {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+
+  .pic1 {
+      width: 204px;
+      height: 139px;
+      padding: 4px;
+      margin-top: 141px;
+  }
+
+  .pic2 {
+      width: 239px;
+      height: 280px;
+      padding: 4px;
+  }
+
+  .pic3 {
+      width: 239px;
+      height: 301px;
+      padding: 4px;
+      margin-right: ;
+      margin-bottom: px;
+  }
+
+  .pic4 {
+      width: 209px;
+      height: 136px;
+      padding: 4px;
+      margin-right: 62px;
+  }
+
+  footer {
+      width: 100%;
+      background-color: #DED1C2;
+      color: #fff;
+      text-align: center;
+      padding: 30px 0;
+  }
+
+  .SNS img {
+      padding: 10px;
+  }
+
+  form p {
+      margin: 5px 0px 5px 0px;
+  }
